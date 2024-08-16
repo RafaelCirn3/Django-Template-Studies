@@ -61,17 +61,17 @@ project_root/
 git clone https://github.com/seu_usuario/seu_repositorio.git
 cd seu_repositorio
 ```
-2. Criar e Ativar um Ambiente Virtual
+###2. Criar e Ativar um Ambiente Virtual
 python -m venv env
 source env/bin/activate   # No Windows: env\Scripts\activate
-3. Instalar as Dependências
+###3. Instalar as Dependências
 pip install -r requirements.txt
-4. Aplicar as Migrações
+###4. Aplicar as Migrações
 python manage.py makemigrations consultaCEP consultaPokemon
 python manage.py migrate
-5. Executar o Servidor de Desenvolvimento
+###5. Executar o Servidor de Desenvolvimento
 python manage.py runserver
-Como Usar
+###**Como Usar**
 Acessar a Aplicação
 Consulta CEP: Acesse http://127.0.0.1:8000/consultaCEP/ para inserir um CEP e buscar o endereço correspondente.
 Consulta Pokémon: Acesse http://127.0.0.1:8000/consultaPokemon/ para inserir o nome de um Pokémon e buscar suas informações.
