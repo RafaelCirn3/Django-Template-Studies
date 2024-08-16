@@ -59,8 +59,8 @@ project_root/
 
 ```bash
 git clone https://github.com/seu_usuario/seu_repositorio.git
-````
 cd seu_repositorio
+```
 2. Criar e Ativar um Ambiente Virtual
 python -m venv env
 source env/bin/activate   # No Windows: env\Scripts\activate
