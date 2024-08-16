@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 import requests
 
+"""crie seu modelo com base nos dados utilizados para sua aplicação, aqui será descrito os dados que você consumirá da api"""
 class Pokemon(models.Model):
     nome = models.CharField(max_length=100)
     altura = models.FloatField(blank=True, null=True)

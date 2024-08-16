@@ -1,6 +1,7 @@
 from django import forms
 from .models import Pokemon
 
+"""formularize os dados a ser utilizados pela sua consulta"""
 class PokemonForm(forms.ModelForm):
     class Meta:
         model = Pokemon
@@ -9,5 +10,5 @@ class PokemonForm(forms.ModelForm):
             'nome': 'Nome do Pokémon',
         }
         widgets = {
-            'nome': forms.TextInput(attrs={'placeholder': 'Digite o nome do Pokémon'}),
+            'nome': forms.TextInput(attrs={'placeholder': 'Digite o nome do Pokémon'}), #personalização
         }
