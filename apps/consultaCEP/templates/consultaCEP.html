@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar CEP</title>
+</head>
+<body>
+    <h1>Consulta de Endereço por CEP</h1>
+    <form method="GET">
+        {{ form.as_p }}
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if endereco %}
+        <h2>Endereço Encontrado:</h2>
+        <p><strong>Logradouro:</strong> {{ endereco.logradouro }}</p>
+        <p><strong>Bairro:</strong> {{ endereco.bairro }}</p>
+        <p><strong>Cidade:</strong> {{ endereco.localidade }}</p>
+        <p><strong>Estado:</strong> {{ endereco.uf }}</p>
+    {% elif endereco is not none %}
+        <p>Endereço não encontrado. Verifique o CEP informado.</p>
+    {% endif %}
+</body>
+</html>
