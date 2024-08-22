@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excluir Endereço</title>
+</head>
+<body>
+    <h1>Excluir Endereço</h1>
+    <p>Tem certeza de que deseja excluir o endereço com CEP {{ endereco.cep }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar</button>
+    </form>
+    <a href="{% url 'endereco_list' %}">Cancelar</a>
+</body>
+</html>

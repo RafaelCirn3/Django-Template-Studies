@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Endereço</title>
+</head>
+<body>
+    <h1>Editar Endereço</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'endereco_list' %}">Cancelar</a>
+</body>
+</html>

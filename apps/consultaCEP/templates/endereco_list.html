@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Endereços</title>
+</head>
+<body>
+    <h1>Lista de Endereços</h1>
+    <ul>
+        {% for endereco in enderecos %}
+            <li>
+                <a href="{% url 'endereco_detail' pk=endereco.pk %}">{{ endereco.cep }} - {{ endereco.localidade }}</a>
+                <a href="{% url 'endereco_edit' pk=endereco.pk %}">Editar</a>
+                <a href="{% url 'endereco_delete' pk=endereco.pk %}">Deletar</a>
+            </li>
+        {% empty %}
+            <li>Não há endereços disponíveis.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'buscar_cep' %}">Adicionar Novo Endereço</a>
+</body>
+</html>
