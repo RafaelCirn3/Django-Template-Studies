@@ -4,6 +4,5 @@ from django.urls import path, include
 #incluse as urls utilizadas pelos seus apps para que sejam utilizadas
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('consultaCEP/', include('apps.consultaCEP.urls')),  
-    path('consultaPokemon/', include('apps.consultaPokemon.urls'))
+    path('consultaCEP/', include('apps.consultaCEP.urls'))
 ]
